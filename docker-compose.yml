@@ -1,0 +1,14 @@
+
+services:
+  bots:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - data:/app/data
+    restart: unless-stopped
+
+volumes:
+  data:
+
